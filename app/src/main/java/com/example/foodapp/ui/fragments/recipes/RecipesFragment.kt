@@ -1,11 +1,9 @@
 package com.example.foodapp.ui.fragments.recipes
 
 import android.os.Bundle
-import android.util.Log
 import android.view.*
 import androidx.fragment.app.Fragment
 import android.widget.Toast
-import androidx.appcompat.widget.MenuItemHoverListener
 import androidx.appcompat.widget.SearchView
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -17,16 +15,13 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.foodapp.viewmodels.MainViewModel
 import com.example.foodapp.R
 import com.example.foodapp.adapters.RecipesAdapter
-import com.example.foodapp.data.database.RecipesEntity
 import com.example.foodapp.databinding.FragmentRecipesBinding
 import com.example.foodapp.ui.MainActivity
-import com.example.foodapp.util.Constants.Companion.API_KEY
 import com.example.foodapp.util.NetworkListener
 import com.example.foodapp.util.NetworkResult
 import com.example.foodapp.util.observeOnce
 import com.example.foodapp.viewmodels.RecipesViewModel
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.android.synthetic.main.fragment_recipes.view.*
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
