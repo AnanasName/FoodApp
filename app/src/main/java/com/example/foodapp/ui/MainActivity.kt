@@ -13,7 +13,7 @@ import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_main.*
 
 @AndroidEntryPoint
-class MainActivity : AppCompatActivity() {
+class   MainActivity : AppCompatActivity() {
 
     private lateinit var navController: NavController
 
@@ -22,6 +22,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setTheme(R.style.AppTheme)
         setContentView(R.layout.activity_main)
 
         navController = findNavController(R.id.navHostFragment)
