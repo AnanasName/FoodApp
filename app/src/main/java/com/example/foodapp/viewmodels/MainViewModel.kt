@@ -14,12 +14,15 @@ import com.example.foodapp.data.database.entities.RecipesEntity
 import com.example.foodapp.models.FoodJoke
 import com.example.foodapp.models.FoodRecipe
 import com.example.foodapp.util.NetworkResult
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import retrofit2.Response
 import java.lang.Exception
+import javax.inject.Inject
 
-class MainViewModel @ViewModelInject
+@HiltViewModel
+class MainViewModel @Inject
 constructor(
         private val repository: Repository,
         application: Application

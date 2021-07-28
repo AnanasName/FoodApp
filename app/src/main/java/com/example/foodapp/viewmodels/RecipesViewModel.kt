@@ -20,11 +20,14 @@ import com.example.foodapp.util.Constants.Companion.QUERY_FILL_INGREDIENTS
 import com.example.foodapp.util.Constants.Companion.QUERY_NUMBER
 import com.example.foodapp.util.Constants.Companion.QUERY_SEARCH
 import com.example.foodapp.util.Constants.Companion.QUERY_TYPE
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class RecipesViewModel @ViewModelInject constructor(
+@HiltViewModel
+class RecipesViewModel @Inject constructor(
     application: Application,
     private val dataStoreRepository: DataStoreRepository
 ) : AndroidViewModel(application) {
